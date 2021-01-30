@@ -87,12 +87,20 @@
 }
 .navigation {
 	float: left;
+	animation: header 1s;
+}
+@keyframes header {
+	0%{
+		margin-top: -60px;
+		animation-timing-function:ease;
+	}
 }
 .logo {
 	float: left;
 	margin-right: 103px;
 	margin-left: 97px;
 	margin-top: 20px;
+	animation: header 1s;
 }
 .logo-svg {
 	height: 60px;
@@ -106,7 +114,25 @@
 .nav-a {
 	color: #3D58A6;
 	font-family: 'Roboto-Regular';
+	position: relative;
 	font-size: 24px;
+	transition:all 1s;
+}
+.nav-a:after {
+	content: '';
+	position: absolute;
+	bottom:0;
+	left:0;
+	background-color: #59CD95;
+    width: 0%;
+    height: 2px;
+}
+.nav-a:hover:after {
+	width: 100%;
+	transition:all 1s;
+}
+.nav-a:hover {
+  color: #59CD95;
 }
 .nav-ul::after {
 	content: '';
